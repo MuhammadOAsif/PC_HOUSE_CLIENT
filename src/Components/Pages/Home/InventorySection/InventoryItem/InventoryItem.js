@@ -8,7 +8,7 @@ const InventoryItem = () => {
     items;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/items/${id}`)
+    fetch(`https://boiling-mountain-69201.herokuapp.com/items/${id}`)
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
@@ -17,7 +17,7 @@ const InventoryItem = () => {
     const newQuantity = parseInt(items.quantity) - 1;
     const itemQuantity = { newQuantity };
     console.log(itemQuantity);
-    const url = `http://localhost:5000/items/${id}`;
+    const url = `https://boiling-mountain-69201.herokuapp.com/items/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
