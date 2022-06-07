@@ -33,33 +33,33 @@ const Home = () => {
           className="absolute flex flex-col xl:py-8 md:min-w-[760px] bottom-[20%]
             mx-1 md:left-1/2 transform md:-translate-x-1/2 rounded-xl text-center  shadow-2xl"
         >
-          <h3 className="font-sans text-pink-500 xl:text-5xl">
+          <h3 className="font-sans text-slate-300 xl:text-5xl">
             BUY AND SELL PC HERE
           </h3>
           <br />
-          <h2 className="text-pink-500">Featured Category</h2>
+          <h2 className="text-slate-300">Featured Category</h2>
           <br />
           <div className="flex flex-wrap justify-between px-4">
             <CustomLink to={"/motherboard"}>
-              <p className="flex px-4 py-2 text-orange-500 hover:font-bold hover:text-orange-600 hover:bg-pink-200">
+              <p className="flex px-4 py-2 text-orange-500">
                 <img className="w-5 h-5 mr-2" src={Motherboard} alt="" />
                 MotherBoard
               </p>
             </CustomLink>
             <CustomLink to={"/processor"}>
-              <p className="flex px-4 py-2 text-orange-500 hover:font-bold hover:text-orange-600 hover:bg-pink-200">
+              <p className="flex px-4 py-2 text-orange-500">
                 <img className="w-5 h-5 mr-2" src={Processor} alt="" />
                 Processor
               </p>
             </CustomLink>
             <CustomLink to={"/ram"}>
-              <p className="flex px-4 py-2 text-orange-500 hover:font-bold hover:text-orange-600 hover:bg-pink-200">
+              <p className="flex px-4 py-2 text-orange-500">
                 <img className="w-5 h-5 mr-2" src={Ram} alt="" />
                 Ram
               </p>
             </CustomLink>
             <CustomLink to={"/cpuCooler"}>
-              <p className="flex px-4 py-2 text-orange-500 hover:font-bold hover:text-orange-600 hover:bg-pink-200">
+              <p className="flex px-4 py-2 text-orange-500">
                 <img className="w-5 h-5 mr-2" src={CPUCooler} alt="" />
                 CPU Cooler
               </p>
@@ -67,9 +67,9 @@ const Home = () => {
             {user ? (
               ""
             ) : (
-              <CustomLink to="/signup">
-                <button className="px-4 py-1 btn button">Get Started</button>
-              </CustomLink>
+              <Link to="/signup">
+                <button className="py-2 px-6 rounded-md">Get Started</button>
+              </Link>
             )}
           </div>
         </div>
@@ -97,7 +97,10 @@ const Home = () => {
               </p>
               <br />
             </div>
-            <button className="btn button">Read More</button>
+
+            <Link to={"/"}>
+              <button className="px-8 py-3 font-sans">Read More</button>
+            </Link>
           </div>
           <div className="order-1 order-xl-2">
             <img src={pcService} alt="" />
@@ -107,7 +110,7 @@ const Home = () => {
         {user ? (
           <div>
             <div className="pt-16">
-              <h1 className="mt-5 text-center text-pink-500">
+              <h1 className="mt-5 text-center text-[#02B290]">
                 TODAY TOP DEAL FULL SETUP
               </h1>
             </div>

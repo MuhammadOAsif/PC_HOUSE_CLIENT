@@ -8,7 +8,7 @@ const AddNewItem = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    const url = `https://boiling-mountain-69201.herokuapp.com/items`;
+    const url = `http://localhost:5000/items`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -28,44 +28,44 @@ const AddNewItem = () => {
       });
   };
   return (
-    <div className="w-full mx-auto font-serif pt-36 xl:pt-56 xl:pb-56 xl:w-1/2">
-      <div className="shadow">
+    <div className="w-full mx-auto font-sans pt-36 xl:pt-56 xl:pb-56 xl:w-1/2">
+      <div className="shadow-lg">
         <div className="w-full p-5 mx-auto xl:w-5/6">
-          <h2 className="pb-5 text-center text-pink-600">ADD NEW ITEM</h2>
+          <h2 className="pb-5 text-center text-[#1FAA59]">ADD NEW ITEM</h2>
           <form
             className="d-flex flex-column"
             onSubmit={handleSubmit(onSubmit)}
           >
             <input
-              className="p-2 mb-2 text-xl"
+              className="p-2 mb-2 text-xl border-2"
               placeholder="Photo URL"
               type="text"
               {...register("img")}
             />
             <input
-              className="p-2 mb-2 text-xl"
+              className="p-2 mb-2 text-xl border-2"
               placeholder="Name"
               {...register("name", { required: true })}
             />
             <input
-              className="p-2 mb-2 text-xl"
+              className="p-2 mb-2 text-xl border-2"
               placeholder="Price"
               type="number"
               {...register("price", { required: true })}
             />
             <input
-              className="p-2 mb-2 text-xl"
+              className="p-2 mb-2 text-xl border-2"
               placeholder="Quantity"
               type="number"
               {...register("quantity", { required: true })}
             />
             <input
-              className="p-2 mb-2 text-xl"
+              className="p-2 mb-2 text-xl border-2"
               placeholder="Supplier Name"
               {...register("supplierName", { required: true })}
             />
             <textarea
-              className="p-2 mb-2 text-xl"
+              className="p-2 mb-2 text-xl border-2"
               placeholder="Short Description"
               {...register("shortDescription", { required: true })}
             />

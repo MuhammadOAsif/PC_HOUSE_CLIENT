@@ -24,11 +24,11 @@ const SendEmailVerification = ({ children }) => {
   if (user.providerData[0]?.providerId === "password" && !user.emailVerified) {
     return (
       <div className="pt-32 text-center">
-        <div className="w-1/2 mx-auto">
+        <div className="w-1/3 mx-auto">
           <img src={emailVerification} alt="" />
         </div>
         <div className="text-center">
-          <h3 className="w-2/5 pb-2 mx-auto text-pink-600">
+          <h3 className="w-2/5 pb-2 mx-auto text-[#1FAA59]">
             Your Email Is not Verified Please Verified Your Email And Continue
             My WareHouse
           </h3>

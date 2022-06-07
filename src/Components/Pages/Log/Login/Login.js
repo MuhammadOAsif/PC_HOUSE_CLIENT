@@ -120,12 +120,10 @@ const Login = () => {
 
   return (
     <div>
-      <div className="mx-auto pt-36 xl:pt-56 xl:pb-56 xl:w-1/2">
-        <div className="shadow">
+      <div className="mx-auto pt-36 xl:pt-56 xl:pb-56 xl:w-1/2 font-sans">
+        <div className="shadow-lg">
           <div className="p-5 mx-auto xl:w-5/6">
-            <h1 className="pb-3 font-serif font-bold text-center">
-              Login Your Account{" "}
-            </h1>
+            <h1 className="pb-3 font-bold text-center">Login Your Account </h1>
 
             {errors?.email && <p className="text-danger">{errors.email}</p>}
             {setErrors && <p className="text-danger">{errors.password}</p>}
@@ -133,14 +131,12 @@ const Login = () => {
             {socialError && <Alert variant="danger">{socialError}</Alert>}
 
             <form action="#" onSubmit={handleLoginSubmitButton}>
-              <div className="font-serif xl:text-xl">
+              <div className="xl:text-xl">
                 <div className="grid pt-4">
-                  <label htmlFor="email" className="">
-                    Email
-                  </label>
+                  <label htmlFor="email">Email</label>
                   <input
                     onBlur={handleEmailToLogin}
-                    className="p-2 font-serif xl:text-xl"
+                    className="p-2 xl:text-xl border-2 border-[#1C8D73] rounded"
                     type="email"
                     name="email"
                     id=""
@@ -155,7 +151,7 @@ const Login = () => {
                   </label>
                   <input
                     onBlur={handlePasswordToLogin}
-                    className="p-2 font-serif xl:text-xl"
+                    className="p-2 xl:text-xl border-[#1C8D73] border-2 rounded"
                     type="password"
                     name="password"
                     id=""
@@ -166,7 +162,7 @@ const Login = () => {
 
                 <div>
                   <input
-                    className="w-full mt-5 bg-pink-600 text-pink btn button"
+                    className="w-full py-2 bg-[#1C8D73] xl:button mt-5 button"
                     type="submit"
                     name="button"
                     value="Login"
@@ -181,13 +177,13 @@ const Login = () => {
                   <div className="grid gap-2 pt-2 pb-2 xl:gap-3 xl:flex">
                     <button
                       onClick={() => signInWithGoogle()}
-                      className="w-full py-2 bg-pink-600 xl:button"
+                      className="w-full py-2 bg-[#1C8D73] xl:button rounded"
                     >
                       Google <i className="fab fa-google-plus-g"></i>
                     </button>
                     <button
                       onClick={() => signInWithGithub()}
-                      className="w-full py-2 bg-pink-600 xl:button"
+                      className="w-full py-2 bg-[#1C8D73] xl:button rounded"
                     >
                       GitHub <i className="fab fa-github"></i>
                     </button>
@@ -196,7 +192,10 @@ const Login = () => {
                 <br />
                 <div className="text-center ">
                   <Link to="/forgotPassword">
-                    <button className="w-full py-2" to="/forgot-password">
+                    <button
+                      className="w-full py-2 rounded"
+                      to="/forgot-password"
+                    >
                       Did you forget your password ?
                     </button>
                   </Link>{" "}

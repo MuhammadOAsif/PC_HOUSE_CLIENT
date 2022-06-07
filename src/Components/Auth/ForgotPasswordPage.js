@@ -46,16 +46,16 @@ const ForgotPasswordPage = () => {
         </div>
       </form>
       <div className="flex p-4 mx-auto text-center xl:w-1/4 xl:p-0">
-        <div className="w-32 h-1 my-3 bg-pink-600"></div>
-        <div className="p-2 text-sm text-pink-600">or login</div>
-        <div className="w-32 h-1 my-3 bg-pink-600"></div>
+        <div className="w-32 h-1 my-3 bg-[#03C6C7]"></div>
+        <div className="p-2 text-sm text-[#03C6C7]">or login</div>
+        <div className="w-32 h-1 my-3 bg-[#03C6C7]"></div>
       </div>
       <div name="social Login">
         <div className="grid gap-2 p-4 pt-2 pb-2 mx-auto xl:w-1/4 xl:gap-3 xl:flex xl:p-0">
-          <button className="w-full py-2 bg-pink-600 border-0">
+          <button className="w-full py-2 bg-[#03C6C7] border-0">
             Google <i className="fab fa-google-plus-g"></i>
           </button>
-          <button className="w-full py-2 bg-pink-600 border-0">
+          <button className="w-full py-2 bg-[#03C6C7] border-0">
             GitHub <i className="fab fa-github"></i>
           </button>
         </div>

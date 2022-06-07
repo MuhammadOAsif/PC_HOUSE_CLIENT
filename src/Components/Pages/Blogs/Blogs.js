@@ -2,13 +2,13 @@ import React from "react";
 
 const Blogs = () => {
   return (
-    <div>
-      <div className="pt-32">
-        <div className="pt-3 m-3 shadow">
-          <h1 className="text-center text-pink-600">Java Script VS NodeJs</h1>
+    <div className="bg-slate-50">
+      <div className="pt-32 shadow-lg bg-slate-100">
+        <div className="pt-3 m-3">
+          <h1 className="text-center text-[#FF6263]">Java Script VS NodeJs</h1>
           <div className="grid grid-cols-2 gap-3 p-3">
-            <div name="JavaScript" className="p-3 border shadow">
-              <h1 className="text-center text-pink-600">JavaScript</h1>
+            <div name="JavaScript" className="p-3 border h-[350px]">
+              <h1 className="text-center text-[#38CC77]">JavaScript</h1>
               <ul>
                 <li>
                   1. JavaScript is a programming language. It is running in any
@@ -27,8 +27,10 @@ const Blogs = () => {
               </ul>
             </div>
             <div>
-              <div name="JavaScript" className="border shadow">
-                <h1 className="pt-3 text-center text-pink-600 ">NodeJs</h1>
+              <div name="JavaScript" className="border">
+                <h1 className="pt-3 text-center text-[#38CC77] h-[60px]">
+                  NodeJs
+                </h1>
                 <ul>
                   <li>
                     1. It is an interpreter and environment for JavaScript with
@@ -52,21 +54,21 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-      <div className="m-3 shadow">
-        <h1 className="pt-5 text-center text-pink-600">
+      <div className="m-3  shadow-lg bg-slate-100">
+        <h1 className="pt-5 text-center text-[#FF6263]">
           {" "}
           When should you use nodejs and when should you use mongodb
         </h1>
-        <div className="pt-3 m-5 border shadow">
+        <div className="pt-3 m-5 border">
           <div>
-            <h4 className="text-center text-pink-600">
+            <h4 className="text-center text-[#38CC77] text-3xl font-semibold">
               {" "}
               NodeJS and MongoDB are two different process.
             </h4>
 
             <div className="grid grid-cols-2 gap-3 p-3">
-              <div name="JavaScript" className="p-3 border shadow">
-                <h1 className="text-center text-pink-600">NodeJS</h1>
+              <div name="JavaScript" className="p-3 border">
+                <h1 className="text-center text-[#38CC77]">NodeJS</h1>
                 <ul>
                   <li>
                     Shortly we can say, NodeJS is a JavaScript runtime
@@ -76,8 +78,8 @@ const Blogs = () => {
                 </ul>
               </div>
               <div>
-                <div name="JavaScript" className="border shadow">
-                  <h1 className="pt-3 pb-5 text-center text-pink-600">
+                <div name="JavaScript" className="border">
+                  <h1 className="pt-3 pb-5 text-center text-[#38CC77]">
                     MongoDB
                   </h1>
                   <ul>
@@ -92,7 +94,7 @@ const Blogs = () => {
             </div>
           </div>
           <div>
-            <p className="w-1/3 p-2 mx-auto border shadow">
+            <p className="w-1/3 p-2 mx-auto border">
               {" "}
               MongoDB is a database where we can store data and NodeJS helps us
               to to connect our client site to database by it's server site.
@@ -100,15 +102,15 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-      <div className="pt-5 shadow">
+      <div className="mt-16 pt-5 shadow-lg bg-slate-100">
         <div>
-          <h1 className="text-center text-pink-600">
+          <h1 className="text-center text-[#FF6263]">
             Differences between SQL and No SQL databases.
           </h1>
-          <h1 className="pt-5 text-center text-pink-600">SQL vs NoSQL</h1>
+          <h1 className="pt-5 text-center text-[#38CC77]">SQL vs NoSQL</h1>
           <div className="grid grid-cols-2 gap-3 p-3">
-            <div name="JavaScript" className="p-3 border shadow">
-              <h1 className="text-center text-pink-600">SQL</h1>
+            <div name="JavaScript" className="p-3 border">
+              <h1 className="text-center text-[#38CC77]">SQL</h1>
               <ul>
                 <li>1. SQL databases are relational.</li>
                 <li>
@@ -121,8 +123,8 @@ const Blogs = () => {
               </ul>
             </div>
             <div>
-              <div name="JavaScript" className="border shadow">
-                <h1 className="pt-4 pb-5 text-center text-pink-600">No SQL</h1>
+              <div name="JavaScript" className="border">
+                <h1 className="pt-4 pb-5 text-center text-[#38CC77]">No SQL</h1>
                 <ul>
                   <li>1. NoSQL databases are non-relational.</li>
                   <li>

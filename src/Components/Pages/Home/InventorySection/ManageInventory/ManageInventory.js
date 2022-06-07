@@ -22,7 +22,7 @@ const ManageInventory = () => {
           </Link>
         </p>
       </div>
-      <h1 className="pt-5 text-center text-pink-500">
+      <h1 className="pt-5 text-center text-[#1C8D73]">
         LATEST ITEMS OUR WAREHOUSE
       </h1>
       <div className="grid pt-16 xl:w-3/4 xl:grid-cols-3 xl:mx-auto gap-x-5 gap-y-10">

@@ -20,7 +20,7 @@ const Support = () => {
         </p>
 
         <div>
-          <h1 className="pt-3 text-center text-pink-600">OUR CONTRACT</h1>
+          <h1 className="pt-3 text-center text-[#03C6C7]">OUR CONTRACT</h1>
           <div className="grid grid-cols-2 gap-3 font-serif font-bold text-pink-700">
             <div>
               <ul>

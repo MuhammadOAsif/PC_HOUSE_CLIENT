@@ -91,8 +91,8 @@ const Review = () => {
     <div className="pt-32">
       <div>
         <div className="xl:w-1/2 xl:mx-auto">
-          <div className="font-mono font-bold">
-            <h1 className="mt-10 mb-10 font-mono text-xl text-center text-pink-600 xl:mb-16 xl:text-4xl">
+          <div className="font-sans text-[#E03B8B] font-bold">
+            <h1 className="mt-10 mb-10 font-sans text-[#E03B8B] text-xl text-center xl:mb-16 xl:text-4xl">
               Our warehouse has been recharted according to the full year month
             </h1>
             <ResponsiveContainer width="100%" aspect="2">
@@ -121,8 +121,8 @@ const Review = () => {
               </LineChart>
             </ResponsiveContainer>
           </div>
-          <div className="font-mono font-bold">
-            <h2 className="mt-10 mb-10 font-mono text-xl text-center text-pink-600 xl:text-4xl xl:mb-16">
+          <div className="font-sans text-[#E03B8B] font-bold">
+            <h2 className="mt-10 mb-10 font-sans text-[#E03B8B] text-xl text-center xl:text-4xl xl:mb-16">
               Our WereHouse Investment Vs Sell
             </h2>
             <ResponsiveContainer width="100%" aspect={2}>

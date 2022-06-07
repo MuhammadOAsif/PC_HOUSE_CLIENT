@@ -9,8 +9,8 @@ function CustomLink({ children, to, ...props }) {
     <div className="d-flex">
       <Link
         style={{
-          color: match ? "#db2777" : "black",
-          textDecoration: match ? "underline" : "none",
+          color: match ? "#1C8D73" : "black",
+          textDecoration: match ? "none" : "none",
         }}
         to={to}
         {...props}

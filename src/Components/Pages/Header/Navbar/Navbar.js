@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 import CustomLink from "../../../Hooks/Custom/CustomLink/CustomLink";
 import auth from "../../../../firebase.init";
+import { MenuIcon } from "@heroicons/react/outline";
+import { XIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -16,14 +18,16 @@ const Navbar = () => {
   };
   return (
     <section>
-      <div className="font-serif">
-        <div className="w-screen h-[80px] z-10 bg-zinc-200 fixed drop-shadow-lg">
+      <div className="font-sans text-[#242B2E]">
+        <div className="w-screen h-[60px] z-20  fixed bg-slate-200">
           <div className="flex items-center justify-between w-full h-full px-2">
-            <div className="flex items-center">
-              <h4 className="mr-4 text-2xl text-pink-600 no-underline">
-                PC_HOUSE
-              </h4>
-              <ul className="hidden gap-2 md:flex">
+            <div className="flex items-center align-middle">
+              <Link className="no-underline" to={"/"}>
+                <h4 className="ml-6 text-2xl text-[#1C8D73] no-underline">
+                  <span className=" text-[#0D0D0D]">PC_</span>HOUSE
+                </h4>
+              </Link>
+              <ul className="hidden gap-2 md:flex pt-2">
                 {user ? (
                   <div className="flex">
                     <li>
@@ -64,23 +68,23 @@ const Navbar = () => {
                 )}
               </ul>
             </div>
-            <div className="hidden pr-4 md:flex">
+            <div className="hidden pr-4 md:flex mt-3">
               {user ? (
                 <ul>
                   <li>
-                    <CustomLink to="/">
+                    <Link className="pt-2" to="/">
                       <button onClick={handleSignOut} className="px-8 py-3">
                         LOGOUT
                       </button>
-                    </CustomLink>
+                    </Link>
                   </li>
                 </ul>
               ) : (
                 <ul>
                   <li>
-                    <CustomLink to="/login">
-                      <button className="px-12 py-3">LOGIN</button>
-                    </CustomLink>
+                    <Link className="pt-2 " to="/login">
+                      <button className="px-12 py-3 bg-[#1C8D73]">LOGIN</button>
+                    </Link>
                   </li>
                 </ul>
               )}
@@ -133,26 +137,26 @@ const Navbar = () => {
                 </li>
               </div>
             )}
-            <div className="flex flex-col my-4">
+            <div className="flex flex-col my-4 mt-2">
               {user ? (
-                <CustomLink to="/">
+                <Link to="/">
                   <button
                     onClick={handleSignOut}
-                    className="px-8 py-3 mb-4 text-pink-600 bg-transparent"
+                    className="px-8 py-3 mb-4 text-[#03C6C7] bg-transparent"
                   >
                     LOGOUT
                   </button>
-                </CustomLink>
+                </Link>
               ) : (
-                <CustomLink to="/login">
-                  <button className="px-8 py-3 mb-4 text-pink-600 bg-transparent">
+                <Link to="/login">
+                  <button className="px-8 py-3 mb-4 text-[#03C6C7] bg-transparent">
                     SIGN IN
                   </button>
-                </CustomLink>
+                </Link>
               )}
-              <CustomLink to="/signup">
+              <Link to="/signup">
                 <button className="px-8 py-3">SIGNUP</button>
-              </CustomLink>
+              </Link>
             </div>
           </ul>
         </div>

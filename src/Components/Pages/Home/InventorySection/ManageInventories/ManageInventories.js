@@ -4,7 +4,7 @@ const ManageInventories = ({ item }) => {
   const { img, name, price, quantity, supplierName, shortDescription } = item;
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("https://boiling-mountain-69201.herokuapp.com/items")
+    fetch("http://localhost:5000/items")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
@@ -12,7 +12,7 @@ const ManageInventories = ({ item }) => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure you want to delete item?");
     if (proceed) {
-      const url = `https://boiling-mountain-69201.herokuapp.com/items/${id}`;
+      const url = `http://localhost:5000/items/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -27,14 +27,16 @@ const ManageInventories = ({ item }) => {
     }
   };
   return (
-    <div className="transition duration-700 ease-in-out border delay-350 bg-pink-50 hover:text-white hover:-translate-y-1 hover:scale-110 hover:bg-pink-500 transform-gpu">
-      <img className="w-[100%]" src={img} alt="" />
-      <div className="p-2">
-        <p>Name: {name}</p>
-        <p>Price: {price}</p>
-        <p>Quantity: {quantity}</p>
-        <p>Supplier Name: {supplierName}</p>
-        <p>{shortDescription}</p>
+    <div>
+      <div className="border h-[700px]">
+        <img className="w-[100%]" src={img} alt="" />
+        <div className="p-2">
+          <p>Name: {name}</p>
+          <p>Price: {price}</p>
+          <p>Quantity: {quantity}</p>
+          <p>Supplier Name: {supplierName}</p>
+          <p>{shortDescription}</p>
+        </div>
       </div>
       <button onClick={() => handleDelete(item._id)} className="w-full button">
         DELETE

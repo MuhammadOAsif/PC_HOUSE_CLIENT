@@ -6,10 +6,9 @@ import {
   useSignInWithGithub,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../../firebase.init";
-import CustomLink from "../../../Hooks/Custom/CustomLink/CustomLink";
 import Loading from "../../../Hooks/Custom/Loading/Loading";
 import "./Signup.css";
 const Signup = () => {
@@ -150,9 +149,9 @@ const Signup = () => {
   }
   return (
     <div className="w-full mx-auto pt-36 xl:pt-56 xl:pb-56 xl:w-1/2">
-      <div className="shadow">
+      <div className="shadow-lg">
         <div className="w-full p-5 mx-auto xl:w-5/6">
-          <h1 className="pb-3 font-serif font-bold text-center">Signup</h1>
+          <h1 className="pb-3 font-sans font-bold text-center">Signup</h1>
           {errors?.password && (
             <p className="text-pink-800">{errors.password}</p>
           )}
@@ -167,13 +166,13 @@ const Signup = () => {
             <Alert variant="danger">{gitHubError?.massage}</Alert>
           )}
           <form action="#" onSubmit={handleRegisterSubmitButton}>
-            <div className="w-full font-serif xl:text-xl">
+            <div className="w-full font-sans xl:text-xl">
               <div className="grid p-2 xl:pt-4 grid-2">
                 <label htmlFor="name" className="">
                   Full Name
                 </label>
                 <input
-                  className="p-2"
+                  className="p-2 border-[#1C8D73] border-2 rounded"
                   type="text"
                   name="name"
                   placeholder="Full Name"
@@ -186,7 +185,7 @@ const Signup = () => {
                 </label>
                 <input
                   onBlur={handleEmailBlur}
-                  className="p-2 font-serif xl:text-xl"
+                  className="p-2 border-[#1C8D73] border-2 rounded font-sans xl:text-xl"
                   type="email"
                   name="email"
                   id=""
@@ -199,7 +198,7 @@ const Signup = () => {
                   Address
                 </label>
                 <input
-                  className="p-2 font-serif xl:text-xl"
+                  className="p-2 border-[#1C8D73] border-2 rounded font-sans xl:text-xl"
                   type="text"
                   name="address"
                   id=""
@@ -214,7 +213,7 @@ const Signup = () => {
                 </label>
                 <input
                   onBlur={handlePasswordBlur}
-                  className="p-2 font-serif xl:text-xl"
+                  className="p-2 border-[#1C8D73] border-2 rounded font-sans xl:text-xl"
                   type="password"
                   name="password"
                   id=""
@@ -228,7 +227,7 @@ const Signup = () => {
                 </label>
                 <input
                   onBlur={handleConfirmPasswordBlur}
-                  className="p-2 font-serif xl:text-xl"
+                  className="p-2 border-[#1C8D73] border-2 rounded font-sans xl:text-xl"
                   type="password"
                   name="confirmPassword"
                   placeholder="Confirm Password"
@@ -252,13 +251,13 @@ const Signup = () => {
                 <div className="grid gap-2 pt-2 pb-2 xl:gap-3 xl:flex">
                   <button
                     onClick={() => signInWithGoogle()}
-                    className="w-full py-2 bg-pink-600 xl:button"
+                    className="w-full py-2 bg-[#1C8D73] rounded  xl:button"
                   >
                     Google <i className="fab fa-google-plus-g"></i>
                   </button>
                   <button
                     onClick={() => signInWithGithub()}
-                    className="w-full py-2 bg-pink-600 xl:button"
+                    className="w-full py-2 bg-[#1C8D73] rounded xl:button"
                   >
                     GitHub <i className="fab fa-github"></i>
                   </button>
@@ -269,11 +268,11 @@ const Signup = () => {
                 <div className="flex gap-2 mx-auto w-96">
                   <p>You already create an account?</p>
                   <>
-                    <CustomLink to="/login">
+                    <Link className="no-underline" to="/login">
                       <span className="text-pink-400 hover:text-pink-700">
                         Login
                       </span>
-                    </CustomLink>
+                    </Link>
                   </>
                 </div>
               </div>

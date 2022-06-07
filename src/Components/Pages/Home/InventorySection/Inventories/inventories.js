@@ -11,8 +11,8 @@ const Inventory = ({ item }) => {
   };
   return (
     <div className="w-100">
-      <div className="transition duration-700 ease-in-out border delay-350 bg-pink-50 hover:text-white hover:-translate-y-1 hover:scale-110 hover:bg-pink-500 transform-gpu">
-        <div>
+      <div>
+        <div className="border h-[700px]">
           <img className="image-size-i" src={img} alt="" />
           <div className="p-2">
             <p>Name: {name}</p>
@@ -21,13 +21,13 @@ const Inventory = ({ item }) => {
             <p>Supplier Name: {supplierName}</p>
             <p>{shortDescription}</p>
           </div>
-          <button
-            onClick={() => navigateToUpdateItems(_id)}
-            className="w-full button"
-          >
-            UPDATE
-          </button>
         </div>
+        <button
+          onClick={() => navigateToUpdateItems(_id)}
+          className="w-full button"
+        >
+          UPDATE
+        </button>
       </div>
     </div>
   );
