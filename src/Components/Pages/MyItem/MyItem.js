@@ -7,7 +7,7 @@ const MyItem = () => {
   console.log(myItems);
   const [email] = useAuthState(auth);
   useEffect(() => {
-    const url = `https://boiling-mountain-69201.herokuapp.com/myItems/${email}`;
+    const url = `https://rocky-castle-41434.herokuapp.com/myItems/${email}`;
     fetch(url, {
       method: "GET",
     })

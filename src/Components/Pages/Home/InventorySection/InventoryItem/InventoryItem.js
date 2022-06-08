@@ -8,7 +8,7 @@ const InventoryItem = () => {
     items;
 
   useEffect(() => {
-    fetch(`https://boiling-mountain-69201.herokuapp.com/items/${id}`)
+    fetch(`https://rocky-castle-41434.herokuapp.com/items/${id}`)
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
@@ -17,7 +17,7 @@ const InventoryItem = () => {
     const newQuantity = parseInt(items.quantity) - 1;
     const itemQuantity = { newQuantity };
     console.log(itemQuantity);
-    const url = `https://boiling-mountain-69201.herokuapp.com/items/${id}`;
+    const url = `https://rocky-castle-41434.herokuapp.com/items/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -45,7 +45,7 @@ const InventoryItem = () => {
           </Link>
         </p>
       </div>
-      <div className="mx-auto transition duration-700 ease-in-out border xl:w-1/2 xl:mt-20 delay-350 bg-pink-50 hover:text-white hover:-translate-y-1 hover:scale-110 hover:bg-pink-500 transform-gpu ">
+      <div className="mx-auto border xl:w-1/2 xl:mt-20">
         <img className="" src={img} alt="" />
         <div className="p-3">
           <p>Product ID: {_id}</p>

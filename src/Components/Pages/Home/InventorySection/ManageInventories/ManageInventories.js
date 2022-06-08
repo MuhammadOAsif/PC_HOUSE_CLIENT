@@ -4,7 +4,7 @@ const ManageInventories = ({ item }) => {
   const { img, name, price, quantity, supplierName, shortDescription } = item;
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("https://boiling-mountain-69201.herokuapp.com/items")
+    fetch("https://rocky-castle-41434.herokuapp.com/items")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
@@ -12,7 +12,7 @@ const ManageInventories = ({ item }) => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure you want to delete item?");
     if (proceed) {
-      const url = `https://boiling-mountain-69201.herokuapp.com/items/${id}`;
+      const url = `https://rocky-castle-41434.herokuapp.com/items/${id}`;
       fetch(url, {
         method: "DELETE",
       })

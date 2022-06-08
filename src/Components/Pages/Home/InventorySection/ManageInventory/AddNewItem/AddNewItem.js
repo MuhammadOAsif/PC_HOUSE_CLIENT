@@ -8,7 +8,7 @@ const AddNewItem = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    const url = `https://boiling-mountain-69201.herokuapp.com/items`;
+    const url = `https://rocky-castle-41434.herokuapp.com/items`;
     fetch(url, {
       method: "POST",
       headers: {
